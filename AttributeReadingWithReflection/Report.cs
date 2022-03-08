@@ -13,7 +13,7 @@ namespace AttributeReadingWithReflection
             _ = items ??
                 throw new ArgumentNullException($"{nameof(items)} is required");
             MemberInfo[] members = items.First().GetType().GetMembers();
-            var report = new StringBuilder("# Report /n/n");
+            var report = new StringBuilder("# Report \n\n");
             report.Append(GetHeaders(members));
             return report.ToString();
         }
